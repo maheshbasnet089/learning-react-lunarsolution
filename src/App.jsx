@@ -2,16 +2,21 @@
 // hello world
 import './App.css'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Home from './Home'
+import About from './About'
+import Contact from './Contact'
+import UseEffect from './UseEffect'
+
 
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<h1>This is home page</h1>} />
-        <Route path='/products/:id' element={<h1>product page</h1>} />
-        <Route path='/about' element={<h1>This is about page</h1>} />
-        <Route path='/contact' element={<h1>This is contact page</h1>} />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path="/useeffect" element={<UseEffect/>} />
       </Routes>
     </BrowserRouter>
   )
